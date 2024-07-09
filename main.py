@@ -21,11 +21,6 @@ sd = ServerData(
     basedir_statistics_records='assets',
 )
 
-from flask_cors import CORS
-
-CORS(app)
-
-
 @app.route('/')
 def root():
     return app.send_static_file('index.html')
