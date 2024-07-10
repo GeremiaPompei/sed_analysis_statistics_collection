@@ -31,8 +31,6 @@ class ServerData:
             sound_index=index,
             sound_name=audio_path.split('/')[-1].split('.')[0],
             sound=result['sound_base64'],
-            spectrogram_3o=result['spectrogram_3o'],
-            freq3o=result['freq3o'],
             spl=result['spl'],
             duration=result['duration'],
         )
