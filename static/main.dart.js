@@ -92982,7 +92982,7 @@ B.b.fi(o,0,a)
 q=k.h(0,a)
 s=1
 break}s=3
-return A.O(A.IO(A.av(["index",a],t.N,t.z),"http://localhost:8000/api/audio_track_metadata"),$async$wr)
+return A.O(A.IO(A.av(["index",a],t.N,t.z),"api/audio_track_metadata"),$async$wr)
 case 3:n=c
 if(n!=null){m=A.aTQ(t.a.a(B.bE.fB(n)))
 o=p.z
@@ -93040,7 +93040,7 @@ while(true)switch(s){case 0:m="en"
 try{p=$.aS().c.f
 m=(p.length===0?B.vX:B.b.gX(p)).gdk()}catch(l){}p=t.N
 s=2
-return A.O(A.IN(A.av(["language",m],p,p),"http://localhost:8000/api/get_categories"),$async$wk)
+return A.O(A.IN(A.av(["language",m],p,p),"api/get_categories"),$async$wk)
 case 2:n=b
 if(n!=null){p=J.fc(t.j.a(J.iD(B.bE.H7(n,null),"categories")),new A.anH(),p)
 p=A.Y(p,!0,p.$ti.i("am.E"))
@@ -93050,7 +93050,7 @@ return A.I($async$wk,r)},
 wj(){var s=0,r=A.J(t.H),q=this,p
 var $async$wj=A.F(function(a,b){if(a===1)return A.G(b,r)
 while(true)switch(s){case 0:s=2
-return A.O(A.IN(B.B_,"http://localhost:8000/api/audio_tracks_info"),$async$wj)
+return A.O(A.IN(B.B_,"api/audio_tracks_info"),$async$wj)
 case 2:p=b
 if(p!=null)q.e=A.bW(J.iD(B.bE.H7(p,null),"length"))
 return A.H(null,r)}})
@@ -93083,7 +93083,7 @@ l.N(0,q.f.nh())
 p=q.c
 o=A.S(p).i("U<1,b3<m,@>>")
 s=2
-return A.O(A.IO(A.av(["user_info",l,"labeling",A.Y(new A.U(p,new A.anJ(a),o),!0,o.i("am.E"))],n,m),"http://localhost:8000/api/send_class_labeling"),$async$wz)
+return A.O(A.IO(A.av(["user_info",l,"labeling",A.Y(new A.U(p,new A.anJ(a),o),!0,o.i("am.E"))],n,m),"api/send_class_labeling"),$async$wz)
 case 2:return A.H(null,r)}})
 return A.I($async$wz,r)}}
 A.anI.prototype={
