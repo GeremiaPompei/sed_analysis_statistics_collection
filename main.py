@@ -28,10 +28,10 @@ def root():
 
 @app.route("/api/audio_track_metadata", methods=["POST"])
 def audio_track_metadata():
-    index = request.json['index']
-    if index is None:
+    user = request.json['user']
+    metadata = sd.audio_track_metadata(user)
+    if metadata is None:
         return jsonify(dict(terminated=True))
-    metadata = sd.audio_track_metadata(index)
     return jsonify(metadata)
 
 
@@ -40,11 +40,25 @@ def audio_tracks_info():
     return jsonify(dict(length=len(sd.audio_paths)))
 
 
+@app.route("/api/is_registered_user", methods=["POST"])
+def is_registered_user():
+    user_info = request.json['user']
+    registered = sd.exists_user(user_info)
+    return jsonify(dict(registered=registered))
+
+
+@app.route("/api/send_user_info", methods=["POST"])
+def send_user_info():
+    user_info = request.json['user_info']
+    sd.send_user_info(user_info)
+    return jsonify(dict())
+
+
 @app.route("/api/send_class_labeling", methods=["POST"])
 def send_class_labeling():
-    user_info = request.json['user_info']
+    user = request.json['user']
     labeling = request.json['labeling']
-    sd.send_class_labeling(user_info, labeling)
+    sd.send_class_labeling(user, labeling)
     return jsonify(dict())
 
 
