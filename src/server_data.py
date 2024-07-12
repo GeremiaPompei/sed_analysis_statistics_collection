@@ -17,11 +17,12 @@ class ServerData:
             "\n".join(['sound_index,sound_name', *[f'{i},{ap}' for i, ap in enumerate(self.audio_paths)]]))
         self.users_filepath = f'{basedir_statistics_records}/users.csv'
         self.users_keys = ['biological_sex', 'years', 'qualification', 'hearing_difficulty', 'hearing_aids',
-                           'noise_sensitivity', 'acoustic_technician', 'device', 'silent_environment']
+                           'noise_sensitivity', 'acoustic_technician']
         create_csv_file(self.users_filepath, self.users_keys)
 
         self.metadata_from_users_filepath = f'{basedir_statistics_records}/metadata_from_users.csv'
-        self.metadata_from_users_keys = ['timer', 'sound_index', 'class_name', 'start_perc', 'end_perc']
+        self.metadata_from_users_keys = ['timer', 'sound_index', 'class_name', 'start_perc', 'end_perc',
+                                         'silent_environment', 'device']
         self.metadata_from_users_keys_reverse = {v: k for k, v in enumerate(['user', *self.metadata_from_users_keys])}
         create_csv_file(self.metadata_from_users_filepath, self.metadata_from_users_keys)
 
