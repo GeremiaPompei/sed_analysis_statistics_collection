@@ -1,25 +1,26 @@
-**Email insertion**
+## Entering email
 
-Email insertion on the main page and access to the panel for labeling through the "Start labeling" button.
+On the main page you can start the labelling process by entering your email and pressing the "Start labelling" button. If the email has not been entered previously, a window will be displayed to add the user information, otherwise you will be redirected to the "Sound events labeling" screen and the first track not yet labelled will be loaded. If with the entered email the analysis has already been completed, a message will be displayed informing the user that all tracks have already been labelled.
 
-**General labeling panel**
+## User information
 
-In the "User information" button, access to the form to add personal information used for statistical purposes is possible. Through the buttons "Track 1", ..., "Track n", access to the screen for labeling the i-th track is available. At the top right, buttons are present to access "Instructions" and "Privacy Policy", in addition to the button for "Submit labels".
+If the email has not already been registered, a window for registering user information opens as soon as the "Start labeling" button is pressed. It allows the addition of personal data. All fields must be completed in order to activate the button allowing the registration of information.
 
-**User information**
+## Sound events labeling
 
-Screen that allows the addition of personal data. All fields must be completed to submit the survey. A green checkmark will appear on the button related to this screen to indicate that the entered data is compliant for submission.
+Screen for labeling the i-th sound track. 
+In the upper part of the screen there are
+- buttons on the top right to display instructions, view privacy and policy and to send labels when finished on this track
+- in the centre the name of the track and a symbol marking when labels can be sent (green thick) or not (yellow triangle).
 
-**Track i**
+In the centre of the screen are:
 
-Screen for labeling the i-th sound track. After loading, the following will be present on the screen:
-- *Spectrum* related to the moment of the track being listened to. Initially, it is represented relative to the first moment of the audio track.
-- *SPL*: sound level pressure of the audio track. Within the box where SPL is shown, the cursor can be moved to select the temporal moment of the audio track to see the spectrum at a certain time (the cursor is a vertical red line). Additionally, a light red selection is shown in this box (a small box highlighting a portion of SPL). This element can be adjusted left or right (by pressing near the left or right side and scrolling while holding) to visually highlight the sound event within the audio track represented graphically by SPL. To assign the type of sound event to the selection, simply press the button related to its class (e.g., "car") in the "Classes to select" list. As soon as this is done, the label is added in the box below SPL called "Label box".
-- Label box: box where labels are reported showing their type and position. These labels can be modified in terms of temporal position by moving their left or right sides with the cursor.
-- Classes to select: list of classes that can be assigned to a label.
-- Play/pause button: button used to play the audio track or pause it.
-- Assigned labels: Complementary view to the "Label box" that allows you to view the assigned labels, reporting the type (or class), the start percentage, and the end percentage (percentage within the audio track). In this view, it is also possible to remove the label in case of an error. Multiple labels of the same type (or class) can be selected on this screen. At least one label must be selected for each track. A green checkmark will appear on the button related to this screen to indicate that the entered data is compliant for submission.
+- spl: sound level pressure of the audio track. Within the frame where the spl is shown, it is possible to move the cursor to select the time instant of the audio track (the cursor is a red vertical line). Also shown in this frame is a selection in light red (small frame highlighting a portion of the spl). This element can be adjusted to the left or right (by pressing near the left or right side and scrolling while holding down) so as to visually highlight the sound event within the audio track graphically represented by the spl. To assign the type of sound event to the selection, simply press the button relating to its class (e.g. "car") in the "Classes to select" list. As soon as this is done, the label is added to the box below the spl called "Label Box".
+- Label Box: pane where the labels are displayed showing their type and position. These labels can be changed in terms of time position by moving their left or right sides with the cursor.
+- Classes to select: list of classes that can be assigned to a label
+- Play/pause button: button used to play or pause the audio track
+- Zoom button: this button opens a screen with only spl, "Label Box", and "Classes to select". This is useful to facilitate selection in the case of a mobile device. To exit this screen, simply press the back arrow (top left).
+- Silent surrounding environment: button to select whether the surroundings are quiet or noisy.
+- Assigned Labels: Complementary view to the "Label Box" that allows you to view the assigned labels showing the class, start percentage and end percentage (percentage within the audio track). In this view, it is also possible to remove the label in the event of an error.
 
-**Submit labels**
-
-Button for submitting labels. If pressed, a screen appears asking to enter the condition of the surrounding environment, which can be "Quiet" or "Noisy". As soon as one of these two buttons is pressed, the data related to user information and the labels assigned to all tracks are sent. This button is deactivated until all necessary data is completed (i.e., when all buttons with an icon have a green checkmark).
+In this view, more than one label can be selected, even from the same class. For each track, at least one label must be selected. 

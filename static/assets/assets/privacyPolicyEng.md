@@ -8,6 +8,7 @@ Our platform collects some personal information in order to conduct statistical 
 - Noise Sensitivity: This information is collected exclusively for statistical research purposes. It will not be used in any other way.
 - Hearing Aids: Information about the use of hearing aids is collected for statistical purposes. It will not be shared or used for other purposes.
 - Hearing Difficulties: These data are collected for statistical purposes. They will not be used for purposes other than those stated.
+- Acoustically competent technician: These data are collected for statistical purposes. They will not be used for purposes other than those stated.
 
 **Data Protection**
 

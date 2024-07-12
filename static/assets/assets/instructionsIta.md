@@ -1,27 +1,26 @@
-**Inserimento email**
+## Inserimento email
 
-Inserimento email nella pagina principale e accesso al pannello per l'etichettatura tramite il bottone "Inizia l'etichettatura".
+Nella pagina principale è possibile iniziare il processo di etichettatura inserendo l'email e premendo il bottone "Inizia l'etichettatura". Se l'email non è stata gia inserita in precedenza verrà visualizzata una finestra per aggiungere le informazioni utenti, in caso contrario si verrà reindirizzati alla schermata "Etichettatura degli eventi sonori" e verrà caricata la prima traccia non ancora etichettata. Nel caso in cui con l'email inserita l'analisi è gia stata completata verrà visualizzato un messaggio che informerà l'utente che tutte le tracce sono state gia etichettate.
 
-**Pannello etichettatura generale**
+## Informazioni utente
 
-Nel bottone "Informazioni utente" è possibile accedere alla form per aggiungere le informazioni personali utilizzate per scopi di statistica. Tramite i bottoni "Traccia 1", ..., "Traccia n" è possibile accedere alla schermata per l'etichettatura della traccia i-esima. In alto a destra sono presenti i bottoni per accedere a "Istruzioni" e "Privacy Policy" oltre al bottone per "Invio delle etichette".
+Se l'email non è stata gia registrata, appena premuto il pulsante "Inizia l'etichettatura" si apre una finestra per la registrazione delle informazioni utente. Essa permette l'aggiunta dei dati personali. Bisogna completare tutti i campi per attivare il bottone che consente la registrazione delle informazioni.
 
-**Informazioni utente**
+## Etichettatura degli eventi sonori
 
-Schermata che permette l'aggiunta dei dati personali. Bisogna completare tutti i campi per inviare il sondaggio. Sul bottone relativo a questa schermata comparirà un contrassegno verde per stabilire che i dati inseriti sono conformi all'invio.
+Schermata per l'etichettatura dell'i-esima traccia sonora. 
+Nella parte alta della shermata sono presenti:
+- bottoni in alto a destra per visualizzare le istruzioni, visualizzare la privacy e policy e per inviare le etichette una volta finita la procedura su questa traccia
+- al centro il nome della traccia e un simbolo che contrassegna quando le etichette possono essere inviate (thick verde) o no (triangolo giallo).
 
-**Traccia i**
+Al centro della schermata vi sono:
 
-Schermata per l'etichettatura dell'i-esima traccia sonora. Dopo il caricamento nella schermata saranno presenti:
-
-- _spettro_ relativo all'istante della traccia che si sta ascoltando. Inizialmente esso viene rappresentato rispetto al primo istante della traccia audio
-- _spl_: sound level pressure della traccia audio. All'interno del riquadro dove viene mostrato l'spl è possibile muovere il cursore per selezionare l'istante temporale della traccia audio così da vedere lo spettro ad un certo istante temporale (il cursore è una linea verticale rossa). Inoltre in questo riquadro viene mostrata una selezione in rosso chiaro (piccolo riquadro che evidenzia una porzione del spl). Questo elemento può essere adattato a sinistra o a destra (premendo vicino al lato sinitro o destro e scorrendo tenendo premuto) così da poter evidenziare in maniera visuale l'evento sonoro interno alla traccia audio rappresentata graficamente dal spl. Per assegnare alla selezione il tipo dell'evento sonoro basta pigiare il bottone relativo alla sua classe (esempio: "macchina") nella lista "Classi da selezionare". Appena questo viene fatto l'etichetta viene aggiunta nel riquadro al di sotto del spl chiamato "Riquadro delle etichette"
+- spl: sound level pressure della traccia audio. All'interno del riquadro dove viene mostrato il spl è possibile muovere il cursore per selezionare l'istante temporale della traccia audio (il cursore è una linea verticale rossa). Inoltre in questo riquadro viene mostrata una selezione in rosso chiaro (piccolo riquadro che evidenzia una porzione del spl). Questo elemento può essere adattato a sinistra o a destra (premendo vicino al lato sinitro o destro e scorrendo tenendo premuto) così da poter evidenziare in maniera visuale l'evento sonoro interno alla traccia audio rappresentata graficamente dal spl. Per assegnare alla selezione il tipo dell'evento sonoro basta pigiare il bottone relativo alla sua classe (esempio: "macchina") nella lista "Classi da selezionare". Appena questo viene fatto l'etichetta viene aggiunta nel riquadro al di sotto del spl chiamato "Riquadro delle etichette"
 - Riquadro delle etichette: riquadro dove vengono riportate le etichettaure mostrando il loro tipo e la loro posizione. Queste etichette possono essere modificate in termini di posizione temporale muovendo i loro lati sinistro o destro muovendoli con il cursore.
-- Classi da selezionare: lista delle classi che possono essere assegnate ad un etichetta
+- Classi da selezionare: lista delle classi che possono essere assegnate ad un'etichetta
 - Bottone play/pausa: bottone utile a riprodurre la traccia audio o metterla in pausa
-- Etichette assegnate: Vista complementare al "Riquadro delle etichette" che permette di visualizare le etichette assegnate riportando il tipo (o classe), la percentuale di inizio e la percentuale di fine (percentuale all'interno della traccia audio). In tale vista è possibile anche rimuovere l'etichetta in caso di errore.
-  In questa schermata è possibile selezionare più di una etichetta anche dello stesso tipo (o classe). Per ogni traccia deve essere selezionata almeno un etichetta. Sul bottone relativo a questa schermata comparirà un contrassegno verde per stabilire che i dati inseriti sono conformi all'invio.
+- Bottone zoom: bottone che permette di aprire una schermata che presenta solamente spl, "Riquadro delle etichette", e "Classi da selezionare". Questa è utile per facilitare la selezione in caso di dispositivo mobile. Per uscire da questa schermata basta premere la freccia indietro (presente in alto a sinistra).
+- Ambiente circostante silenzioso: bottone per selezionare se l'ambiente circostante è silenzioso o rumoroso.
+- Etichette assegnate: Vista complementare al "Riquadro delle etichette" che permette di visualizare le etichette assegnate riportando la classe, la percentuale di inizio e la percentuale di fine (percentuale all'interno della traccia audio). In tale vista è possibile anche rimuovere l'etichetta in caso di errore.
 
-**Invio delle etichette**
-
-Bottone per l'invio delle etichette. Se questo viene premuto appare una schermata che chiede di inserire la condizione dell'ambiente circostante che può essere "Silenzioso" o "Rumoroso". Appena uno tra questi due bottoni viene premuto i dati relativi alle informazioni utente ed alle etichette assegnate a tutte le tracce vengono inviate. Questo bottone è disattivato fino al momento in cui tutti i dati necessari vengono completati (ovvero quando tutti i bottoni con un icona presentano un contrassegno verde).
+In questa schermata è possibile selezionare più di una etichetta anche della stessa classe. Per ogni traccia deve essere selezionata almeno un' etichetta. 
