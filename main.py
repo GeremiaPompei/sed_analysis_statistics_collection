@@ -1,7 +1,16 @@
+import os
+
 from flask import Flask, request, jsonify
+
+from src.mail_handler import MailHandler
 from src.server_data import ServerData
 
+basedir = ''
 app = Flask(__name__, static_url_path='')
+mail_handler = MailHandler(
+    credentials_path=f'{basedir}credentials.json',
+    thanks_and_inform_message_path=f'{basedir}assets/mail_texts/thanks_and_inform.json'
+)
 sd = ServerData(
     categories=[
         ('speaking', 'parlato'),
@@ -17,9 +26,18 @@ sd = ServerData(
         ('saw', 'sega'),
         ('whisk', 'frullino'),
     ],
-    server_cache_dir='assets/server_cache',
-    basedir_statistics_records='assets',
+    server_cache_dir=f'{basedir}assets/server_cache',
+    basedir_statistics_records=f'{basedir}assets',
+    mail_handler=mail_handler,
 )
+
+
+def get_language_id_from_header():
+    language = ''
+    if 'language' in request.headers:
+        language = request.headers['language']
+    return 1 if 'it' in language.lower() else 0
+
 
 @app.route('/')
 def root():
@@ -58,16 +76,13 @@ def send_user_info():
 def send_class_labeling():
     user = request.json['user']
     labeling = request.json['labeling']
-    sd.send_class_labeling(user, labeling)
+    sd.send_class_labeling(user, labeling, language_id=get_language_id_from_header())
     return jsonify(dict())
 
 
 @app.route("/api/get_categories", methods=["GET"])
 def get_categories():
-    language = ''
-    if 'language' in request.headers:
-        language = request.headers['language']
-    categories = sd.get_categories(language)
+    categories = sd.get_categories(language_id=get_language_id_from_header())
     return jsonify(dict(categories=categories))
 
 

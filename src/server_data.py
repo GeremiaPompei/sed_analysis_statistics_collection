@@ -7,9 +7,10 @@ from src.csv_utils import create_csv_file, register_csv_row
 
 class ServerData:
 
-    def __init__(self, categories, server_cache_dir, basedir_statistics_records):
+    def __init__(self, categories, server_cache_dir, basedir_statistics_records, mail_handler):
         self.categories = categories
         self.server_cache_dir = server_cache_dir
+        self.mail_handler = mail_handler
         self.audio_paths = sorted([f'{self.server_cache_dir}/{fn}' for fn in os.listdir(self.server_cache_dir) if
                                    not fn.startswith('.') and fn.endswith('.json')])
 
@@ -61,11 +62,16 @@ class ServerData:
             timestamp = datetime.now()
             register_csv_row([user_info], self.users_filepath, user, self.users_keys, timestamp)
 
-    def send_class_labeling(self, user, labeling):
+    def send_class_labeling(self, user, labeling, language_id):
         if self.exists_user(user):
             timestamp = datetime.now()
             register_csv_row(labeling, self.metadata_from_users_filepath, user, self.metadata_from_users_keys,
                              timestamp)
+            if self.__user_to_index__(user) == len(self.audio_paths):
+                try:
+                    self.mail_handler.send_thanks_and_inform_message(user, language_id)
+                except:
+                    pass
 
-    def get_categories(self, language):
-        return [cat[1 if 'it' in language.lower() else 0] for cat in self.categories]
+    def get_categories(self, language_id):
+        return [cat[language_id] for cat in self.categories]
