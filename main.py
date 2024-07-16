@@ -7,24 +7,25 @@ from src.server_data import ServerData
 
 basedir = ''
 app = Flask(__name__, static_url_path='')
+
 mail_handler = MailHandler(
     credentials_path=f'{basedir}credentials.json',
     thanks_and_inform_message_path=f'{basedir}assets/mail_texts/thanks_and_inform.json'
 )
 sd = ServerData(
     categories=[
-        ('speaking', 'parlato'),
-        ('car', 'macchina'),
-        ('truck', 'camion'),
-        ('plane', 'aereo'),
-        ('train', 'treno'),
-        ('motorbike', 'moto'),
-        ('dog', 'cane'),
-        ('birds', 'uccelli'),
-        ('clap', 'applauso'),
-        ('pneumatic gun', 'pistola pneumatica'),
-        ('saw', 'sega'),
-        ('whisk', 'frullino'),
+        ('Speaking', 'Parlato'),
+        ('Car', 'Auto'),
+        ('Truck', 'Camion'),
+        ('Plane', 'Aereo'),
+        ('Train', 'Treno'),
+        ('Motorbike', 'Moto'),
+        ('Dog', 'Cane'),
+        ('Birds', 'Uccelli'),
+        ('Clap', 'Applauso'),
+        ('Pneumatic gun', 'Pistola pneumatica'),
+        ('Saw', 'Sega'),
+        ('Brush cutter', 'Decespugliatore'),
     ],
     server_cache_dir=f'{basedir}assets/server_cache',
     basedir_statistics_records=f'{basedir}assets',
