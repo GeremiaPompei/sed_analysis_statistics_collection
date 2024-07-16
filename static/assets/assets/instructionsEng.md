@@ -1,10 +1,10 @@
 ## Entering email
 
-On the main page you can start the labelling process by entering your email and pressing the "Start labelling" button. If the email has NOT been entered previously, a window will be displayed to add the user information, otherwise you will be redirected to the "Sound events labeling" screen and the first track NOT yet labelled will be loaded. If with the entered email the analysis has already been completed, a message will be displayed informing the user that all tracks have already been labelled.
+On the main page you can start the labelling process by entering your email and pressing the "Start labelling" button. If the email has not been entered previously, a window will be displayed to add the user information, otherwise you will be redirected to the "Sound events labeling" screen and the first track not yet labelled will be loaded. If with the entered email the analysis has already been completed, a message will be displayed informing the user that all tracks have already been labelled.
 
 ## User information
 
-If the email has NOT already been registered, a window for registering user information opens as soon as the "Start labeling" button is pressed. It allows the addition of personal data. All fields must be completed in order to activate the button allowing the registration of information.
+If the email has not already been registered, a window for registering user information opens as soon as the "Start labeling" button is pressed. It allows the addition of personal data. All fields must be completed in order to activate the button allowing the registration of information.
 
 ## Sound events labeling
 

@@ -1,5 +1,3 @@
-import os
-
 from flask import Flask, request, jsonify
 
 from src.mail_handler import MailHandler
