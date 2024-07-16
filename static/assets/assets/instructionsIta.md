@@ -1,10 +1,10 @@
 ## Inserimento email
 
-Nella pagina principale è possibile iniziare il processo di etichettatura inserendo l'email e premendo il bottone "Inizia l'etichettatura". Se l'email non è stata gia inserita in precedenza verrà visualizzata una finestra per aggiungere le informazioni utenti, in caso contrario si verrà reindirizzati alla schermata "Etichettatura degli eventi sonori" e verrà caricata la prima traccia non ancora etichettata. Nel caso in cui con l'email inserita l'analisi è gia stata completata verrà visualizzato un messaggio che informerà l'utente che tutte le tracce sono state gia etichettate.
+Nella pagina principale è possibile iniziare il processo di etichettatura inserendo l'email e premendo il bottone "Inizia l'etichettatura". Se l'email NON è stata gia inserita in precedenza verrà visualizzata una finestra per aggiungere le informazioni utenti, in caso contrario si verrà reindirizzati alla schermata "Etichettatura degli eventi sonori" e verrà caricata la prima traccia NON ancora etichettata. Nel caso in cui con l'email inserita l'analisi è gia stata completata verrà visualizzato un messaggio che informerà l'utente che tutte le tracce sono state gia etichettate.
 
 ## Informazioni utente
 
-Se l'email non è stata gia registrata, appena premuto il pulsante "Inizia l'etichettatura" si apre una finestra per la registrazione delle informazioni utente. Essa permette l'aggiunta dei dati personali. Bisogna completare tutti i campi per attivare il bottone che consente la registrazione delle informazioni.
+Se l'email NON è stata gia registrata, appena premuto il pulsante "Inizia l'etichettatura" si apre una finestra per la registrazione delle informazioni utente. Essa permette l'aggiunta dei dati personali. Bisogna completare tutti i campi per attivare il bottone che consente la registrazione delle informazioni.
 
 ## Etichettatura degli eventi sonori
 

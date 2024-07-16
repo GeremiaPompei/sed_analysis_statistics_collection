@@ -1,0 +1,1 @@
+The email and data entered will only be used for direct contact purposes related to research, will NOT be shared with third parties and will NOT be used for marketing purposes
