@@ -1,5 +1,6 @@
 import smtplib
 import json
+from email.message import EmailMessage
 
 
 class MailHandler:
@@ -17,11 +18,15 @@ class MailHandler:
         self.thanks_and_inform_message = json.load(open(thanks_and_inform_message_path))
 
     def __call__(self, to, subject, body=''):
-        message = 'Subject: {}\n\n{}'.format(subject, body)
         s = smtplib.SMTP(self.smtp_host, self.smtp_port)
         # s.starttls()
+        msg = EmailMessage()
         s.login(self.smtp_user, self.smtp_password)
-        s.sendmail(self.smtp_user, to, message)
+        msg['from'] = self.smtp_user
+        msg['to'] = to
+        msg['subject'] = subject
+        msg.set_content(body)
+        s.send_message(msg)
         s.quit()
 
     def send_thanks_and_inform_message(self, user, language_id=0):
