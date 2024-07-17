@@ -15,7 +15,7 @@ class MailHandler:
             self.smtp_password = credentials['smtp_password']
         if len(self.smtp_password) == 0:
             self.smtp_password = input('Insert "smtp_password":')
-        self.thanks_and_inform_message = json.load(open(thanks_and_inform_message_path))
+        self.thanks_and_inform_message = json.load(open(thanks_and_inform_message_path, encoding='utf-8'))
 
     def __call__(self, to, subject, body=''):
         s = smtplib.SMTP(self.smtp_host, self.smtp_port)
