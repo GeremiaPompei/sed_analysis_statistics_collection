@@ -8,14 +8,15 @@ Se l'email non è stata gia registrata, appena premuto il pulsante "Inizia l'eti
 
 ## Etichettatura degli eventi sonori
 
-Schermata per l'etichettatura dell'i-esima traccia sonora. 
+Schermata per l'etichettatura dell'i-esima traccia sonora.
 Nella parte alta della shermata sono presenti:
+
 - bottoni in alto a destra per visualizzare le istruzioni, visualizzare la privacy e policy e per inviare le etichette una volta finita la procedura su questa traccia
 - al centro il nome della traccia e un simbolo che contrassegna quando le etichette possono essere inviate (thick verde) o no (triangolo giallo).
 
 Al centro della schermata vi sono:
 
-- spl: sound level pressure della traccia audio. All'interno del riquadro dove viene mostrato il spl è possibile muovere il cursore per selezionare l'istante temporale della traccia audio (il cursore è una linea verticale rossa). Inoltre in questo riquadro viene mostrata una selezione in rosso chiaro (piccolo riquadro che evidenzia una porzione del spl). Questo elemento può essere adattato a sinistra o a destra (premendo vicino al lato sinitro o destro e scorrendo tenendo premuto) così da poter evidenziare in maniera visuale l'evento sonoro interno alla traccia audio rappresentata graficamente dal spl. Per assegnare alla selezione il tipo dell'evento sonoro basta pigiare il bottone relativo alla sua classe (esempio: "macchina") nella lista "Classi da selezionare". Appena questo viene fatto l'etichetta viene aggiunta nel riquadro al di sotto del spl chiamato "Riquadro delle etichette"
+- spl: sound level pressure della traccia audio. All'interno del riquadro dove viene mostrato il spl è possibile muovere il cursore per selezionare l'istante temporale della traccia audio (il cursore è una linea verticale rossa). Inoltre in questo riquadro viene mostrata una selezione in rosso chiaro (piccolo riquadro che evidenzia una porzione del spl). Questo elemento può essere adattato a sinistra o a destra (premendo vicino al lato sinitro o destro e scorrendo tenendo premuto) così da poter evidenziare in maniera visuale l'evento sonoro interno alla traccia audio rappresentata graficamente dal spl. Per assegnare alla selezione il tipo dell'evento sonoro basta pigiare il bottone relativo alla sua classe (esempio: "auto") nella lista "Classi da selezionare". Appena questo viene fatto l'etichetta viene aggiunta nel riquadro al di sotto del spl chiamato "Riquadro delle etichette"
 - Riquadro delle etichette: riquadro dove vengono riportate le etichettaure mostrando il loro tipo e la loro posizione. Queste etichette possono essere modificate in termini di posizione temporale muovendo i loro lati sinistro o destro muovendoli con il cursore.
 - Classi da selezionare: lista delle classi che possono essere assegnate ad un'etichetta
 - Bottone play/pausa: bottone utile a riprodurre la traccia audio o metterla in pausa
@@ -23,4 +24,4 @@ Al centro della schermata vi sono:
 - Ambiente circostante silenzioso: bottone per selezionare se l'ambiente circostante è silenzioso o rumoroso.
 - Etichette assegnate: Vista complementare al "Riquadro delle etichette" che permette di visualizare le etichette assegnate riportando la classe, la percentuale di inizio e la percentuale di fine (percentuale all'interno della traccia audio). In tale vista è possibile anche rimuovere l'etichetta in caso di errore.
 
-In questa schermata è possibile selezionare più di una etichetta anche della stessa classe. Per ogni traccia deve essere selezionata almeno un' etichetta. 
+In questa schermata è possibile selezionare più di una etichetta anche della stessa classe. Per ogni traccia deve essere selezionata almeno un' etichetta.

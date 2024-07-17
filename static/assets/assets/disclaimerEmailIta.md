@@ -1,1 +1,1 @@
-La email ed i dati inseriti saranno utilizzati solo per scopi di contatto diretto legati alla ricerca, NON saranno condivisi con terze parti e NON saranno utilizzati per scopi di marketing
+*La email ed i dati inseriti saranno utilizzati solo per scopi di contatto diretto legati alla ricerca, NON saranno condivisi con terze parti e NON saranno utilizzati per scopi di marketing*
