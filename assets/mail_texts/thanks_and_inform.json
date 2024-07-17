@@ -1,10 +1,10 @@
 [
   {
-    "subject": "Thanks [USER] for your submission",
-    "body": "Thank you for your submission [USER]. You will be contacted for conclude the survey"
+    "subject": "Thank you for participating in the “Sound Event Recognition Evaluation Survey” within the Italian National Research Project PRIN 2022 COMBINE",
+    "body": "All your labeling has been successfully submitted and registered.\nThank you for participating in the “Sound Event Recognition Evaluation Survey” within the Italian National Research Project PRIN 2022 COMBINE.\n\nYou will receive an email in the coming months inviting you to participate in a second round of evaluation. Your future participation will be important to assess the concordance of responses.\nThank you."
   },
   {
-    "subject": "Grazie [USER] per la sottomissione",
-    "body": "Grazie per la sottomissione [USER]. Sarai contattato per concludere il sondaggio"
+    "subject": "Grazie per aver partecipato al “Sondaggio per la valutazione del riconoscimento degli eventi sonori” all’interno del Progetto di Ricerca Nazionale PRIN 2022 COMBINE",
+    "body": "Tutte le tue etichettature sono state inviate e registrate con successo.\nGrazie per aver partecipato al “Sondaggio per la valutazione del riconoscimento degli eventi sonori” all’interno del Progetto di Ricerca Nazionale PRIN 2022 COMBINE.\n\nNei prossimi mesi riceverai una mail per invitarti a partecipare ad un secondo round di valutazione. La tua futura partecipazione sarà importante per valutare la concordanza delle risposte.\nGrazie."
   }
 ]
