@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, request, jsonify
 
 from src.mail_handler import MailHandler
@@ -14,11 +16,10 @@ mail_handler = MailHandler(
     thanks_and_inform_message_path=f'{basedir}assets/mail_texts/thanks_and_inform.json'
 )
 """
-audio_tracks_dir = f'{basedir}assets/audio_tracks'
-server_cache_dir = f'{basedir}assets/server_cache'
+audio_tracks_dir = os.path.join(basedir, 'assets', 'audio_tracks')
+server_cache_dir = os.path.join(basedir, 'assets', 'server_cache')
 audio_handler = AudioHandler(audio_tracks_dir, server_cache_dir)
-sd = ServerData(
-    categories=[
+"""categories=[
         ('Speaking', 'Parlato'),
         ('Car', 'Auto'),
         ('Truck', 'Camion'),
@@ -34,9 +35,34 @@ sd = ServerData(
         ('Pneumatic gun', 'Pistola pneumatica'),
         ('Electric saw', 'Sega elettrica'),
         ('Brush cutter', 'Decespugliatore'),
-    ],
+]"""
+categories=[
+  ('airplane', 'airplane'),
+  ('bells', 'bells'),
+  ('birds', 'birds'),
+  ('cats', 'cats'),
+  ('chicken coop', 'chicken coop'),
+  ('cicadas and crickets', 'cicadas and crickets'),
+  ('clacson', 'clacson'),
+  ('crows and seagulls', 'crows and seagulls'),
+  ('dogs', 'dogs'),
+  ('garbage', 'garbage'),
+  ('helicopter', 'helicopter'),
+  ('lawn mower and brush cutter', 'lawn mower and brush cutter'),
+  ('music', 'music'),
+  ('sirens and alarms', 'sirens and alarms'),
+  ('thunder, fireworks and gunshot', 'thunder, fireworks and gunshot'),
+  ('train', 'train'),
+  ('vacuum cleaner, fan and hairdryer', 'vacuum cleaner, fan and hairdryer'),
+  ('vehicle idling', 'vehicle idling'),
+  ('vehicle pass-by', 'vehicle pass-by'),
+  ('voices', 'voices'),
+  ('workshop', 'workshop')
+]
+sd = ServerData(
+    categories=categories,
     server_cache_dir=server_cache_dir,
-    basedir_statistics_records=f'{basedir}assets',
+    basedir_statistics_records=os.path.join(basedir, 'assets'),
     mail_handler=None  # ,mail_handler,
 )
 

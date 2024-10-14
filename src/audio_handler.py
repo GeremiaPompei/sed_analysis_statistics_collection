@@ -52,16 +52,16 @@ class AudioHandler:
         return spl
 
     def get_cached_spl_spec(self, audio_path, server_cache):
-        hashed_ap = audio_path.split('/')[-1].split('.')[0]
-        fp = f'{server_cache}/{hashed_ap}.json'
+        hashed_ap = os.path.basename(audio_path).split('.')[0]
+        fp = os.path.join(server_cache, f'{hashed_ap}.json')
         if not os.path.exists(fp):
             data, sr = librosa.load(audio_path)
             duration = librosa.get_duration(y=data, sr=sr)
             spl = list(self.audio_to_spl((data, sr)))
-            audio_path_mp3 = audio_path.replace('wav', 'mp3')
-            AudioSegment.from_wav(audio_path).export(audio_path_mp3, format="mp3")
+            audio_path_mp3 = audio_path# audio_path.replace('wav', 'mp3')
+            # AudioSegment.from_wav(audio_path).export(audio_path_mp3, format="mp3")
             with open(audio_path_mp3, "rb") as file:
                 sound_base64 = base64.b64encode(file.read()).decode('ascii')
-            os.remove(audio_path_mp3)
+            # os.remove(audio_path_mp3)
             json.dump(dict(spl=spl, duration=duration * 1000, sound_base64=sound_base64), open(fp, 'w'))
         return fp
