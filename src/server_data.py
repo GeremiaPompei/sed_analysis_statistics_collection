@@ -7,7 +7,7 @@ from src.csv_utils import create_csv_file, register_csv_row
 
 class ServerData:
 
-    def __init__(self, categories, server_cache_dir, basedir_statistics_records, mail_handler):
+    def __init__(self, categories, server_cache_dir, basedir_statistics_records, mail_handler=None):
         self.categories = categories
         self.server_cache_dir = server_cache_dir
         self.mail_handler = mail_handler
@@ -67,7 +67,7 @@ class ServerData:
             timestamp = datetime.now()
             register_csv_row(labeling, self.metadata_from_users_filepath, user, self.metadata_from_users_keys,
                              timestamp)
-            if self.__user_to_index__(user) == len(self.audio_paths):
+            if self.mail_handler is not None and self.__user_to_index__(user) == len(self.audio_paths):
                 try:
                     self.mail_handler.send_thanks_and_inform_message(user, language_id)
                 except:

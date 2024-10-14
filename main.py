@@ -3,13 +3,20 @@ from flask import Flask, request, jsonify
 from src.mail_handler import MailHandler
 from src.server_data import ServerData
 
+from src.audio_handler import AudioHandler
+
 basedir = ''
 app = Flask(__name__, static_url_path='')
 
+"""
 mail_handler = MailHandler(
     credentials_path=f'{basedir}credentials.json',
     thanks_and_inform_message_path=f'{basedir}assets/mail_texts/thanks_and_inform.json'
 )
+"""
+audio_tracks_dir = f'{basedir}assets/audio_tracks'
+server_cache_dir = f'{basedir}assets/server_cache'
+audio_handler = AudioHandler(audio_tracks_dir, server_cache_dir)
 sd = ServerData(
     categories=[
         ('Speaking', 'Parlato'),
@@ -28,9 +35,9 @@ sd = ServerData(
         ('Electric saw', 'Sega elettrica'),
         ('Brush cutter', 'Decespugliatore'),
     ],
-    server_cache_dir=f'{basedir}assets/server_cache',
+    server_cache_dir=server_cache_dir,
     basedir_statistics_records=f'{basedir}assets',
-    mail_handler=mail_handler,
+    mail_handler=None  # ,mail_handler,
 )
 
 
