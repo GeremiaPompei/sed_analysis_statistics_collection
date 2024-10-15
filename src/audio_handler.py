@@ -63,5 +63,5 @@ class AudioHandler:
             with open(audio_path_mp3, "rb") as file:
                 sound_base64 = base64.b64encode(file.read()).decode('ascii')
             # os.remove(audio_path_mp3)
-            json.dump(dict(spl=spl, duration=duration * 1000, sound_base64=sound_base64), open(fp, 'w'))
+            json.dump(dict(spl=spl, duration=int(duration * 1000), sound_base64=sound_base64), open(fp, 'w'))
         return fp
