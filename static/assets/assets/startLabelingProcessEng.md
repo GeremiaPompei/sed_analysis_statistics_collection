@@ -1,6 +1,10 @@
 **Survey for the evaluation of sound event recognition.**
 \
 &nbsp;
+
+OBJECTIVE: Evaluate the human response to sound event recognition, to be later used for comparison with Artificial Intelligence event recognition.
+\
+&nbsp;
 - You will have to identify and label sound events in 10 audio tracks.
 - The labelling task consists of marking the beginning and end of each identified sound event, assigning it a class from the selectable ones.
 

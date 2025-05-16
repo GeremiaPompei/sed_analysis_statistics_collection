@@ -1,43 +1,69 @@
+import os
+
 from flask import Flask, request, jsonify
 
 from src.mail_handler import MailHandler
 from src.server_data import ServerData
 
+from src.audio_handler import AudioHandler
+
 basedir = ''
 app = Flask(__name__, static_url_path='')
 
+"""
 mail_handler = MailHandler(
     credentials_path=f'{basedir}credentials.json',
     thanks_and_inform_message_path=f'{basedir}assets/mail_texts/thanks_and_inform.json'
 )
+"""
+audio_tracks_dir = os.path.join(basedir, 'assets', 'audio_tracks')
+server_cache_dir = os.path.join(basedir, 'assets', 'server_cache')
+audio_handler = AudioHandler(audio_tracks_dir, server_cache_dir)
+"""categories=[
+        ('Speaking', 'Parlato'),
+        ('Car', 'Auto'),
+        ('Truck', 'Camion'),
+        ('Plane', 'Aereo'),
+        ('Train', 'Treno'),
+        ('Motorbike', 'Moto'),
+        ('Hammer', 'Martello'),
+        ('Rooster', 'Gallo'),
+        ('Dog', 'Cane'),
+        ('Object fall', 'Caduta oggetto'),
+        ('Birds', 'Uccelli'),
+        ('Clap', 'Applauso'),
+        ('Pneumatic gun', 'Pistola pneumatica'),
+        ('Electric saw', 'Sega elettrica'),
+        ('Brush cutter', 'Decespugliatore'),
+]"""
+categories=[
+  ('airplane', 'airplane'),
+  ('bells', 'bells'),
+  ('birds', 'birds'),
+  ('cats', 'cats'),
+  ('chicken coop', 'chicken coop'),
+  ('cicadas and crickets', 'cicadas and crickets'),
+  ('clacson', 'clacson'),
+  ('crows and seagulls', 'crows and seagulls'),
+  ('dogs', 'dogs'),
+  ('garbage', 'garbage'),
+  ('helicopter', 'helicopter'),
+  ('lawn mower and brush cutter', 'lawn mower and brush cutter'),
+  ('music', 'music'),
+  ('sirens and alarms', 'sirens and alarms'),
+  ('thunder, fireworks and gunshot', 'thunder, fireworks and gunshot'),
+  ('train', 'train'),
+  ('vacuum cleaner, fan and hairdryer', 'vacuum cleaner, fan and hairdryer'),
+  ('vehicle idling', 'vehicle idling'),
+  ('vehicle pass-by', 'vehicle pass-by'),
+  ('voices', 'voices'),
+  ('workshop', 'workshop')
+]
 sd = ServerData(
-    categories=[
-    ('Jet aircrafts', 'Aerei a reazione'),
-    ('Bells', 'Campane'),
-    ('Birds', 'Uccelli'),
-    ('Cat fights and moans', 'Liti e miagolii di gatti'),
-    ('Chicken coop', 'Pollaio'),
-    ('Cicadas and crickets', 'Cicale e grilli'),
-    ('Horn', 'Clacson'),
-    ('Crows seagulls and magpies', 'Corvi gabbiani e gazze'),
-    ('Dog barkings and howlings', 'Abbaiare e ululare di cani'),
-    ('Glass breaking', 'Rottura di vetri'),
-    ('Propeller aircrafts', 'Aerei a elica'),
-    ('Lawn mower brush cutter and olive shaker', 'Tosaerba decespugliatore e scuotitore per olive'),
-    ('Music', 'Musica'),
-    ('Sirens and alarms', 'Sirene e allarmi'),
-    ('Thunder fireworks and gunshot', 'Tuoni fuochi artificio e spari'),
-    ('Train', 'Treno'),
-    ('Vacuum cleaner fan and hairdryer', 'Aspirapolvere ventilatore e asciugacapelli'),
-    ('Vehicle idling', 'Stazionamento di veicolo'),
-    ('Vehicle pass-by', 'Passaggio di veicolo'),
-    ('Voices', 'Voci'),
-    ('Wind turbine', 'Turbina eolica'),
-    ('Workshop', 'Officina')
-],
-    server_cache_dir=f'{basedir}assets/server_cache',
-    basedir_statistics_records=f'{basedir}assets',
-    mail_handler=mail_handler,
+    categories=categories,
+    server_cache_dir=server_cache_dir,
+    basedir_statistics_records=os.path.join(basedir, 'assets'),
+    mail_handler=None  # ,mail_handler,
 )
 
 

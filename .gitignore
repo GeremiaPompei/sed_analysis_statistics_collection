@@ -2,4 +2,6 @@
 **.DS_Store
 venv
 .idea
-assets/*.csv
+assets/*
+!assets/server_cache/.gitkeep
+!assets/audio_tracks/.gitkeep
