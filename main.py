@@ -19,46 +19,33 @@ mail_handler = MailHandler(
 audio_tracks_dir = os.path.join(basedir, 'assets', 'audio_tracks')
 server_cache_dir = os.path.join(basedir, 'assets', 'server_cache')
 audio_handler = AudioHandler(audio_tracks_dir, server_cache_dir)
-"""categories=[
-        ('Speaking', 'Parlato'),
-        ('Car', 'Auto'),
-        ('Truck', 'Camion'),
-        ('Plane', 'Aereo'),
-        ('Train', 'Treno'),
-        ('Motorbike', 'Moto'),
-        ('Hammer', 'Martello'),
-        ('Rooster', 'Gallo'),
-        ('Dog', 'Cane'),
-        ('Object fall', 'Caduta oggetto'),
-        ('Birds', 'Uccelli'),
-        ('Clap', 'Applauso'),
-        ('Pneumatic gun', 'Pistola pneumatica'),
-        ('Electric saw', 'Sega elettrica'),
-        ('Brush cutter', 'Decespugliatore'),
-]"""
-categories=[
-  ('airplane', 'airplane'),
-  ('bells', 'bells'),
-  ('birds', 'birds'),
-  ('cats', 'cats'),
-  ('chicken coop', 'chicken coop'),
-  ('cicadas and crickets', 'cicadas and crickets'),
-  ('clacson', 'clacson'),
-  ('crows and seagulls', 'crows and seagulls'),
-  ('dogs', 'dogs'),
-  ('garbage', 'garbage'),
-  ('helicopter', 'helicopter'),
-  ('lawn mower and brush cutter', 'lawn mower and brush cutter'),
-  ('music', 'music'),
-  ('sirens and alarms', 'sirens and alarms'),
-  ('thunder, fireworks and gunshot', 'thunder, fireworks and gunshot'),
-  ('train', 'train'),
-  ('vacuum cleaner, fan and hairdryer', 'vacuum cleaner, fan and hairdryer'),
-  ('vehicle idling', 'vehicle idling'),
-  ('vehicle pass-by', 'vehicle pass-by'),
-  ('voices', 'voices'),
-  ('workshop', 'workshop')
+
+categories = [
+    ('Jet aircrafts', 'Aerei a reazione'),
+    ('Bells', 'Campane'),
+    ('Birds', 'Uccelli'),
+    ('Cat fights and moans', 'Liti e miagolii di gatti'),
+    ('Chicken coop', 'Pollaio'),
+    ('Cicadas and crickets', 'Cicale e grilli'),
+    ('Horn', 'Clacson'),
+    ('Crows seagulls and magpies', 'Corvi gabbiani e gazze'),
+    ('Dog barkings and howlings', 'Abbaiare e ululare di cani'),
+    ('Glass breaking', 'Rottura di vetri'),
+    ('Propeller aircrafts', 'Aerei a elica'),
+    ('Lawn mower brush cutter and olive shaker', 'Tosaerba decespugliatore e scuotitore per olive'),
+    ('Music', 'Musica'),
+    ('Sirens and alarms', 'Sirene e allarmi'),
+    ('Thunder fireworks and gunshot', 'Tuoni fuochi artificio e spari'),
+    ('Train', 'Treno'),
+    ('Vacuum cleaner fan and hairdryer', 'Aspirapolvere ventilatore e asciugacapelli'),
+    ('Vehicle idling', 'Stazionamento veicolo'),
+    ('Vehicle pass-by', 'Passaggio veicolo'),
+    ('Voices', 'Voci'),
+    ('Wind turbine', 'Turbina eolica'),
+    ('Workshop', 'Officina')
 ]
+
+
 sd = ServerData(
     categories=categories,
     server_cache_dir=server_cache_dir,
